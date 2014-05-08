@@ -70,7 +70,7 @@ jwt.aud = 'https://login-blitz02.soma.salesforce.com/services/oauth2/token';
 Map<String,String> claims = new  Map<String,String>();
 claims.put('prn','summer@cmort.org');
 jwt.claims = claims;
-return JWTBearerFlow.getAccessToken('https://provisioning.blitz02.blitz.salesforce.com/services/oauth2/token', jwt);
+String access_token = JWTBearerFlow.getAccessToken('https://provisioning.blitz02.blitz.salesforce.com/services/oauth2/token', jwt);
  ```     
 
 #Google RSA-256 JWT Bearer Flow
@@ -85,5 +85,5 @@ jwt.aud = 'https://accounts.google.com/o/oauth2/token';
 Map<String,String> claims = new  Map<String,String>();
 claims.put('scope','https://www.googleapis.com/auth/drive');
 jwt.claims = claims;
-return JWTBearerFlow.getAccessToken('https://accounts.google.com/o/oauth2/token', jwt);
+String access_token = JWTBearerFlow.getAccessToken('https://accounts.google.com/o/oauth2/token', jwt);
 ```
