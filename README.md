@@ -1,7 +1,7 @@
 jwt
 ===
 
-Apex implementation of JWT and JWT Bearer flow.   Requires Summer 14 release (or remove the Crypto.signWithCertificate call in JWT )
+Apex implementation of JWT and JWT Bearer flow.   Requires Summer 14 release for RSA-SHA256 support.
 
 
 #Unsigned JWT
@@ -33,7 +33,7 @@ jwt.aud = 'some audience';
 token = jwt.issue();     
 ```
 
-#RSA256 Signed JWT with Certificate from Setup (requires Summer14)
+#RSA256 Signed JWT with Certificate from Setup 
 ```
 JWT jwt = new JWT('RS256');
 jwt.cert = 'JWTKey';
