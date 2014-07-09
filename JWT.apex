@@ -9,7 +9,7 @@ public class JWT {
     public Map<String,String> claims {get;set;}
     public Integer validFor {get;set;}
     public String cert {get;set;}
-    public String pem {get;set;}
+    public String pkcs8 {get;set;}
     public String privateKey {get;set;}
     
     
@@ -61,7 +61,7 @@ public class JWT {
             if (cert != null ) {
                 signature = Crypto.signWithCertificate('rsa-sha256', Blob.valueOf(jwt), cert);
             } else {
-                Blob privateKey = EncodingUtil.base64Decode(pem);
+                Blob privateKey = EncodingUtil.base64Decode(pkcs8);
                 signature = Crypto.sign('rsa-sha256', Blob.valueOf(jwt), privateKey);
             }
             jwt += '.' + base64URLencode(signature);  
