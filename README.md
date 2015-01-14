@@ -66,11 +66,8 @@ JWT jwt = new JWT('RS256');
 jwt.cert = 'JWTKey';
 jwt.iss = '3MVG9PhR6g6B7ps6TYoM9J8TuRwyvkAmDUKainDupyG6eJ92nmK8m4LYueD5Lgtnyv0QoWBrB.YjuWCVj_rl_';
 jwt.sub = 'summer@cmort.org';
-jwt.aud = 'https://login-blitz02.soma.salesforce.com/services/oauth2/token';
-Map<String,String> claims = new  Map<String,String>();
-claims.put('prn','summer@cmort.org');
-jwt.claims = claims;
-String access_token = JWTBearerFlow.getAccessToken('https://provisioning.blitz02.blitz.salesforce.com/services/oauth2/token', jwt);
+jwt.aud = 'https://login.salesforce.com/services/oauth2/token';
+String access_token = JWTBearerFlow.getAccessToken('https://login.salesforce.com/services/oauth2/token', jwt);
  ```     
 
 #Google RSA-256 JWT Bearer Flow
