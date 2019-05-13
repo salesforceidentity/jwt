@@ -1,3 +1,6 @@
+NOTE: Apex now has native support for RSA based JWT generation: [https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_Auth_JWS.htm#apex_class_Auth_JWS]
+
+
 jwt
 ===
 
