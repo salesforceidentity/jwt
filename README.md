@@ -29,7 +29,7 @@ token = jwt.issue();
 #RSA256 Signed JWT with PEM encoded p12
 ```
 JWT jwt = new JWT('RS256');
-jwt.pem = 'MIICXQIBAAKBgQC4U4Bma7kKa0CLU...pem encoded p12 RSA Key';
+jwt.pkcs8 = 'MIICXQIBAAKBgQC4U4Bma7kKa0CLU...pem encoded p12 RSA Key';
 jwt.iss = 'your issuer';
 jwt.sub = 'some subject';
 jwt.aud = 'some audience';
@@ -78,7 +78,7 @@ String access_token = JWTBearerFlow.getAccessToken('https://login.salesforce.com
 
 ```
 JWT jwt = new JWT('RS256');
-jwt.pem = 'MIICXQIBAAKBgQC4U4Bma7kKa0CLU...pem encoded p12 RSA Key';
+jwt.pkcs8 = 'MIICXQIBAAKBgQC4U4Bma7kKa0CLU...pem encoded p12 RSA Key';
 jwt.iss = 'someclient@developer.gserviceaccount.com';
 jwt.sub = 'someuser@some.domain';
 jwt.aud = 'https://accounts.google.com/o/oauth2/token';
